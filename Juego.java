@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 class Operator {
 	int v1;
@@ -18,33 +19,21 @@ class Operator {
 }
 
 public class Juego {
-
-	@SuppressWarnings("resource")
+@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 		int x, y;
-
-		//x = Integer.parseInt(args[0]);
-		//y = Integer.parseInt(args[1]);
-
-		//x = 3;
-		//y = 6;
-
-		/**/
-		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-	    System.out.println("Enter value 01 :");
-	    String xs = myObj.nextLine();
-	    System.out.println("Enter value 02 :");
-	    String ys = myObj.nextLine();
-	    x = Integer.parseInt(xs);
+		
+		String xs = JOptionPane.showInputDialog("Enter value 01 :");
+		String ys = JOptionPane.showInputDialog("Enter value 02 :");
+		x = Integer.parseInt(xs);
 		y = Integer.parseInt(ys);
-		/**/
-
-
+	    
+		
 		Operator obj1 = new Operator(x,y);
-
-		System.out.println("Suma : " + obj1.Add());
+		
+		JOptionPane.showMessageDialog(null, "Suma " + obj1.Add() + "!");
 
 	}
 
